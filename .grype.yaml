@@ -1,156 +1,4 @@
 ignore:
-  - vulnerability: CVE-2026-54369
-    package:
-      name: libacl1
-      type: deb
-  - vulnerability: CVE-2026-54370
-    package:
-      name: libacl1
-      type: deb
-  - vulnerability: CVE-2026-76642
-    package:
-      name: bsdutils
-      type: deb
-  - vulnerability: CVE-2026-76642
-    package:
-      name: libblkid1
-      type: deb
-  - vulnerability: CVE-2026-76642
-    package:
-      name: liblastlog2-2
-      type: deb
-  - vulnerability: CVE-2026-76642
-    package:
-      name: libmount1
-      type: deb
-  - vulnerability: CVE-2026-76642
-    package:
-      name: libsmartcols1
-      type: deb
-  - vulnerability: CVE-2026-76642
-    package:
-      name: libuuid1
-      type: deb
-  - vulnerability: CVE-2026-76642
-    package:
-      name: login
-      type: deb
-  - vulnerability: CVE-2026-76642
-    package:
-      name: mount
-      type: deb
-  - vulnerability: CVE-2026-76642
-    package:
-      name: util-linux
-      type: deb
-  - vulnerability: CVE-2026-78408
-    package:
-      name: bsdutils
-      type: deb
-  - vulnerability: CVE-2026-78408
-    package:
-      name: libblkid1
-      type: deb
-  - vulnerability: CVE-2026-78408
-    package:
-      name: liblastlog2-2
-      type: deb
-  - vulnerability: CVE-2026-78408
-    package:
-      name: libmount1
-      type: deb
-  - vulnerability: CVE-2026-78408
-    package:
-      name: libsmartcols1
-      type: deb
-  - vulnerability: CVE-2026-78408
-    package:
-      name: libuuid1
-      type: deb
-  - vulnerability: CVE-2026-78408
-    package:
-      name: login
-      type: deb
-  - vulnerability: CVE-2026-78408
-    package:
-      name: mount
-      type: deb
-  - vulnerability: CVE-2026-78408
-    package:
-      name: util-linux
-      type: deb
-  - vulnerability: CVE-2026-78409
-    package:
-      name: bsdutils
-      type: deb
-  - vulnerability: CVE-2026-78409
-    package:
-      name: libblkid1
-      type: deb
-  - vulnerability: CVE-2026-78409
-    package:
-      name: liblastlog2-2
-      type: deb
-  - vulnerability: CVE-2026-78409
-    package:
-      name: libmount1
-      type: deb
-  - vulnerability: CVE-2026-78409
-    package:
-      name: libsmartcols1
-      type: deb
-  - vulnerability: CVE-2026-78409
-    package:
-      name: libuuid1
-      type: deb
-  - vulnerability: CVE-2026-78409
-    package:
-      name: login
-      type: deb
-  - vulnerability: CVE-2026-78409
-    package:
-      name: mount
-      type: deb
-  - vulnerability: CVE-2026-78409
-    package:
-      name: util-linux
-      type: deb
-  - vulnerability: CVE-2026-78410
-    package:
-      name: bsdutils
-      type: deb
-  - vulnerability: CVE-2026-78410
-    package:
-      name: libblkid1
-      type: deb
-  - vulnerability: CVE-2026-78410
-    package:
-      name: liblastlog2-2
-      type: deb
-  - vulnerability: CVE-2026-78410
-    package:
-      name: libmount1
-      type: deb
-  - vulnerability: CVE-2026-78410
-    package:
-      name: libsmartcols1
-      type: deb
-  - vulnerability: CVE-2026-78410
-    package:
-      name: libuuid1
-      type: deb
-  - vulnerability: CVE-2026-78410
-    package:
-      name: login
-      type: deb
-  - vulnerability: CVE-2026-78410
-    package:
-      name: mount
-      type: deb
-  - vulnerability: CVE-2026-78410
-    package:
-      name: util-linux
-      type: deb
   - vulnerability: CVE-2026-65703
     package:
       name: libavcodec61
@@ -783,230 +631,235 @@ ignore:
     package:
       name: libmagickwand-7.q16-10
       type: deb
-
-  # --- added by curator on 2026-09-21 (UTC) ---
-  # High — upstream won't-fix
   - vulnerability: CVE-2025-69720
     package:
       name: libncurses6
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2025-69720
     package:
       name: libncursesw6
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2025-69720
     package:
       name: libtinfo6
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2025-69720
     package:
       name: ncurses-base
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2025-69720
     package:
       name: ncurses-bin
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-14164
     package:
       name: libarchive13t64
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-24882
     package:
       name: dirmngr
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-24882
     package:
       name: gnupg
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-24882
     package:
       name: gnupg-l10n
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-24882
     package:
       name: gpg
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-24882
     package:
       name: gpg-agent
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-24882
     package:
       name: gpgconf
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-24882
     package:
       name: gpgsm
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-34990
     package:
       name: libcups2t64
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-44168
     package:
       name: libmariadb3
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-44168
     package:
       name: mariadb-client
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-44168
     package:
       name: mariadb-client-core
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-44168
     package:
       name: mariadb-common
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-44171
     package:
       name: libmariadb3
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-44171
     package:
       name: mariadb-client
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-44171
     package:
       name: mariadb-client-core
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-44171
     package:
       name: mariadb-common
       type: deb
-  # Critical — upstream won't-fix
   - vulnerability: CVE-2026-44172
     package:
       name: libmariadb3
       type: deb
-  # Critical — upstream won't-fix
   - vulnerability: CVE-2026-44172
     package:
       name: mariadb-client
       type: deb
-  # Critical — upstream won't-fix
   - vulnerability: CVE-2026-44172
     package:
       name: mariadb-client-core
       type: deb
-  # Critical — upstream won't-fix
   - vulnerability: CVE-2026-44172
     package:
       name: mariadb-common
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-48163
     package:
       name: libmariadb3
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-48163
     package:
       name: mariadb-client
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-48163
     package:
       name: mariadb-client-core
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-48163
     package:
       name: mariadb-common
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-48165
     package:
       name: libmariadb3
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-48165
     package:
       name: mariadb-client
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-48165
     package:
       name: mariadb-client-core
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-48165
     package:
       name: mariadb-common
       type: deb
-  # Critical — upstream won't-fix
   - vulnerability: CVE-2026-49261
     package:
       name: libmariadb3
       type: deb
-  # Critical — upstream won't-fix
   - vulnerability: CVE-2026-49261
     package:
       name: mariadb-client
       type: deb
-  # Critical — upstream won't-fix
   - vulnerability: CVE-2026-49261
     package:
       name: mariadb-client-core
       type: deb
-  # Critical — upstream won't-fix
   - vulnerability: CVE-2026-49261
     package:
       name: mariadb-common
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-5435
     package:
       name: libc-bin
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-5435
     package:
       name: libc6
       type: deb
-  # Critical — upstream won't-fix
   - vulnerability: CVE-2026-6653
     package:
       name: libxml2
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-9538
     package:
       name: libperl5.40
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-9538
     package:
       name: perl
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-9538
     package:
       name: perl-base
       type: deb
-  # High — upstream won't-fix
   - vulnerability: CVE-2026-9538
     package:
       name: perl-modules-5.40
+      type: deb
+
+  # --- added by curator on 2026-09-22 (UTC) ---
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-88047
+    package:
+      name: libtesseract5
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-88047
+    package:
+      name: tesseract-ocr
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-88048
+    package:
+      name: libtesseract5
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-88048
+    package:
+      name: tesseract-ocr
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-88051
+    package:
+      name: libtesseract5
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-88051
+    package:
+      name: tesseract-ocr
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-88052
+    package:
+      name: libtesseract5
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-88052
+    package:
+      name: tesseract-ocr
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-88053
+    package:
+      name: libtesseract5
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-88053
+    package:
+      name: tesseract-ocr
       type: deb
