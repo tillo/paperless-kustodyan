@@ -5,7 +5,7 @@
 #   PAPERLESS_APPS=paperless_kustodyan.apps.PaperlessKustodyanConfig
 # No paperless source files are modified. The app is stdlib-only (urllib), so no extra
 # Python packages are installed.
-FROM ghcr.io/paperless-ngx/paperless-ngx:2.20.15
+FROM ghcr.io/paperless-ngx/paperless-ngx:3.2.1
 
 # CACHEBUST_DAY (injected by CI as $(date +%Y%m%d)) invalidates this layer once per day.
 # Upstream releases quarterly-ish while Debian patches weekly, so the base image
@@ -15,14 +15,12 @@ RUN echo "cache day: ${CACHEBUST_DAY}" && \
     apt-get update && apt-get -y upgrade && \
     rm -rf /var/lib/apt/lists/*
 
-# Security patch-bumps for Python packages upstream pins one release behind:
-# django 5.2.17 (GHSA-mwm9-4648-f68q SQLi, GHSA-gvg8-93h5-g6qq SQLi,
-# GHSA-8p8v-wh79-9r56 DoS, GHSA-933h-hp56-hf7m DoS), nltk 3.10.3
-# (GHSA-x99w-6fgc-pmfw pickle RCE, GHSA-m4rf-3fr8-xwx3 JVM inject,
-# GHSA-jm6w-m3j8-898g), urllib3 2.6.3 (GHSA-38jv-5279-wg99 DoS). Exact pins on
-# purpose — DROP these on the next base-image bump: if upstream already ships
-# >= these versions, this line would downgrade them.
-RUN python3 -m pip install --no-cache-dir --no-deps django==5.2.17 nltk==3.10.3 urllib3==2.6.3
+# Security patch-bump for the one package 3.2.1 ships behind our pin: django 5.2.17
+# (GHSA-mwm9-4648-f68q SQLi, GHSA-gvg8-93h5-g6qq SQLi, GHSA-8p8v-wh79-9r56 DoS,
+# GHSA-933h-hp56-hf7m DoS). 3.2.1 already ships nltk 3.10.3 and urllib3 2.7.0 (>= the
+# former pins below), so those pins are dropped — re-pinning them would downgrade.
+# Re-check these against the base image on every bump.
+RUN python3 -m pip install --no-cache-dir --no-deps django==5.2.17
 
 # /usr/src/paperless/src is paperless's WORKDIR and on the Python import path, owned by
 # uid 1000 (paperless). --chown keeps the runtime user able to read it.

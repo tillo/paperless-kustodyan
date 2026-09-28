@@ -1,11 +1,21 @@
 """
 Make paperless full-text search work over the encrypted, tokenized index.
 
-The Whoosh index holds tokens, not words, so we intercept `DelayedFullTextQuery._get_query`
-and rewrite each query term the SAME way the data was protected, before paperless parses it:
+On paperless-ngx 2.x (Whoosh): the index holds tokens, not words, so we intercept
+`DelayedFullTextQuery._get_query` and rewrite each query term the SAME way the data was
+protected, before paperless parses it:
   - content              → deterministic token (`k`+hex) → exact term match (equality only)
   - title, correspondent → PROPE EqualSearch [min,max] band → `field:[lo TO hi]` range query;
     a full word gives equality, a `word*` prefix gives begins-with — one call serves both.
+
+On paperless-ngx 3.x (Tantivy): `documents.index` was removed and the search backend replaced
+(Whoosh → Tantivy). The string-level token rewrite is still valid in principle, but the hook
+points (parse_user_query / parse_simple_*_query) and the range-query semantics over the
+tokenized Tantivy fields have not been re-verified against a live RPS engine, and the
+simple-text/title parsers do regex substring matching that cannot express ciphertext lookups.
+So `install()` degrades gracefully on 3.x: searchable mode is disabled with a clear warning and
+everything else (protect-on-write, role-aware deprotect-on-read, classifier/preview) is
+unaffected. See the Tantivy search-rewrite follow-up.
 No paperless source is edited.
 """
 import logging
@@ -62,7 +72,18 @@ def _tokenize_query(q_str: str) -> str:
 def install():
     if not config.SEARCHABLE_CONTENT:
         return
-    from documents import index as I
+    try:
+        from documents import index as I
+    except ImportError:
+        # paperless-ngx 3.x: Whoosh -> Tantivy, `documents.index` no longer exists.
+        # Encrypted-field search is not yet ported; disable it rather than crash
+        # AppConfig.ready() (an uncaught ImportError here would abort Django startup).
+        log.warning(
+            "kustodyan: paperless-ngx 3.x Tantivy backend detected (documents.index removed) — "
+            "encrypted-field full-text search is not yet supported on Tantivy; searchable mode "
+            "disabled. Content/title/correspondent stay protected and role-aware on read.",
+        )
+        return
 
     cls = getattr(I, "DelayedFullTextQuery", None)
     if cls is None or not hasattr(cls, "_get_query"):
