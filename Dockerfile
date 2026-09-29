@@ -5,7 +5,22 @@
 #   PAPERLESS_APPS=paperless_kustodyan.apps.PaperlessKustodyanConfig
 # No paperless source files are modified. The app is stdlib-only (urllib), so no extra
 # Python packages are installed.
+# Rebuild gosu with a current Go toolchain to clear the ~25 unreachable Go-stdlib CVEs
+# the upstream image ships in gosu (1.17 built with EOL go1.24.4; net/tls/mail/HTTP/url
+# stdlib paths gosu never exercises). gosu's own release binaries lag too (1.19 ships
+# go1.24.6), so build from source with golang:1.27 and bump its two deps to latest —
+# the go.mod pins x/sys v0.1.0, which carries GO-2026-5024.
+FROM golang:1.27 AS gosu
+WORKDIR /build
+RUN go mod init gosu-build && \
+    go get github.com/tianon/gosu@1.19 && \
+    go get golang.org/x/sys@latest github.com/moby/sys/user@latest && \
+    CGO_ENABLED=0 go build -trimpath -o /usr/local/bin/gosu github.com/tianon/gosu
+
 FROM ghcr.io/paperless-ngx/paperless-ngx:3.2.1
+
+# Replace the stale gosu binary with the freshly built one.
+COPY --from=gosu /usr/local/bin/gosu /usr/sbin/gosu
 
 # CACHEBUST_DAY (injected by CI as $(date +%Y%m%d)) invalidates this layer once per day.
 # Upstream releases quarterly-ish while Debian patches weekly, so the base image
