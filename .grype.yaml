@@ -39,194 +39,6 @@ ignore:
     package:
       name: libstdc++6
       type: deb
-  - vulnerability: CVE-2026-107695
-    package:
-      name: libavcodec61
-      type: deb
-  - vulnerability: CVE-2026-107695
-    package:
-      name: libavformat61
-      type: deb
-  - vulnerability: CVE-2026-107695
-    package:
-      name: libavutil59
-      type: deb
-  - vulnerability: CVE-2026-107695
-    package:
-      name: libswresample5
-      type: deb
-  - vulnerability: CVE-2026-113351
-    package:
-      name: libexpat1
-      type: deb
-  - vulnerability: CVE-2026-115506
-    package:
-      name: libexpat1
-      type: deb
-  - vulnerability: CVE-2026-13608
-    package:
-      name: curl
-      type: deb
-  - vulnerability: CVE-2026-13608
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  - vulnerability: CVE-2026-13608
-    package:
-      name: libcurl4t64
-      type: deb
-  - vulnerability: CVE-2026-18924
-    package:
-      name: curl
-      type: deb
-  - vulnerability: CVE-2026-18924
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  - vulnerability: CVE-2026-18924
-    package:
-      name: libcurl4t64
-      type: deb
-  - vulnerability: CVE-2026-19931
-    package:
-      name: curl
-      type: deb
-  - vulnerability: CVE-2026-19931
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  - vulnerability: CVE-2026-19931
-    package:
-      name: libcurl4t64
-      type: deb
-  - vulnerability: CVE-2026-75141
-    package:
-      name: libavcodec61
-      type: deb
-  - vulnerability: CVE-2026-75141
-    package:
-      name: libavformat61
-      type: deb
-  - vulnerability: CVE-2026-75141
-    package:
-      name: libavutil59
-      type: deb
-  - vulnerability: CVE-2026-75141
-    package:
-      name: libswresample5
-      type: deb
-  - vulnerability: CVE-2026-75142
-    package:
-      name: libavcodec61
-      type: deb
-  - vulnerability: CVE-2026-75142
-    package:
-      name: libavformat61
-      type: deb
-  - vulnerability: CVE-2026-75142
-    package:
-      name: libavutil59
-      type: deb
-  - vulnerability: CVE-2026-75142
-    package:
-      name: libswresample5
-      type: deb
-  - vulnerability: CVE-2026-75143
-    package:
-      name: libavcodec61
-      type: deb
-  - vulnerability: CVE-2026-75143
-    package:
-      name: libavformat61
-      type: deb
-  - vulnerability: CVE-2026-75143
-    package:
-      name: libavutil59
-      type: deb
-  - vulnerability: CVE-2026-75143
-    package:
-      name: libswresample5
-      type: deb
-  - vulnerability: CVE-2026-75144
-    package:
-      name: libavcodec61
-      type: deb
-  - vulnerability: CVE-2026-75144
-    package:
-      name: libavformat61
-      type: deb
-  - vulnerability: CVE-2026-75144
-    package:
-      name: libavutil59
-      type: deb
-  - vulnerability: CVE-2026-75144
-    package:
-      name: libswresample5
-      type: deb
-  - vulnerability: CVE-2026-75146
-    package:
-      name: libavcodec61
-      type: deb
-  - vulnerability: CVE-2026-75146
-    package:
-      name: libavformat61
-      type: deb
-  - vulnerability: CVE-2026-75146
-    package:
-      name: libavutil59
-      type: deb
-  - vulnerability: CVE-2026-75146
-    package:
-      name: libswresample5
-      type: deb
-  - vulnerability: CVE-2026-80229
-    package:
-      name: curl
-      type: deb
-  - vulnerability: CVE-2026-80229
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  - vulnerability: CVE-2026-80229
-    package:
-      name: libcurl4t64
-      type: deb
-  - vulnerability: CVE-2026-80230
-    package:
-      name: curl
-      type: deb
-  - vulnerability: CVE-2026-80230
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  - vulnerability: CVE-2026-80230
-    package:
-      name: libcurl4t64
-      type: deb
-  - vulnerability: CVE-2026-80255
-    package:
-      name: curl
-      type: deb
-  - vulnerability: CVE-2026-80255
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  - vulnerability: CVE-2026-80255
-    package:
-      name: libcurl4t64
-      type: deb
-  - vulnerability: CVE-2026-82209
-    package:
-      name: curl
-      type: deb
-  - vulnerability: CVE-2026-82209
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  - vulnerability: CVE-2026-82209
-    package:
-      name: libcurl4t64
-      type: deb
   - vulnerability: CVE-2026-38350
     package:
       name: libavcodec61
@@ -975,285 +787,389 @@ ignore:
     package:
       name: libcurl4t64
       type: deb
+  - vulnerability: CVE-2026-107928
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-107928
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-107928
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-107929
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-107929
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-107929
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-64830
+    package:
+      name: libavcodec61
+      type: deb
+  - vulnerability: CVE-2026-64830
+    package:
+      name: libavformat61
+      type: deb
+  - vulnerability: CVE-2026-64830
+    package:
+      name: libavutil59
+      type: deb
+  - vulnerability: CVE-2026-64830
+    package:
+      name: libswresample5
+      type: deb
+  - vulnerability: CVE-2026-64832
+    package:
+      name: libavcodec61
+      type: deb
+  - vulnerability: CVE-2026-64832
+    package:
+      name: libavformat61
+      type: deb
+  - vulnerability: CVE-2026-64832
+    package:
+      name: libavutil59
+      type: deb
+  - vulnerability: CVE-2026-64832
+    package:
+      name: libswresample5
+      type: deb
+  - vulnerability: CVE-2026-64833
+    package:
+      name: libavcodec61
+      type: deb
+  - vulnerability: CVE-2026-64833
+    package:
+      name: libavformat61
+      type: deb
+  - vulnerability: CVE-2026-64833
+    package:
+      name: libavutil59
+      type: deb
+  - vulnerability: CVE-2026-64833
+    package:
+      name: libswresample5
+      type: deb
+  - vulnerability: CVE-2026-64834
+    package:
+      name: libavcodec61
+      type: deb
+  - vulnerability: CVE-2026-64834
+    package:
+      name: libavformat61
+      type: deb
+  - vulnerability: CVE-2026-64834
+    package:
+      name: libavutil59
+      type: deb
+  - vulnerability: CVE-2026-64834
+    package:
+      name: libswresample5
+      type: deb
+  - vulnerability: CVE-2026-64835
+    package:
+      name: libavcodec61
+      type: deb
+  - vulnerability: CVE-2026-64835
+    package:
+      name: libavformat61
+      type: deb
+  - vulnerability: CVE-2026-64835
+    package:
+      name: libavutil59
+      type: deb
+  - vulnerability: CVE-2026-64835
+    package:
+      name: libswresample5
+      type: deb
+  - vulnerability: CVE-2026-86414
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-86414
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-86414
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-87862
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-87862
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-87862
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-87863
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-87863
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-87863
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-87864
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-87864
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-87864
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-87865
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-87865
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-87865
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-92388
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-92388
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-92388
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-92389
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-92389
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-92389
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-92390
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-92390
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-92390
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-92391
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-92391
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-92391
+    package:
+      name: libcurl4t64
+      type: deb
+  - vulnerability: CVE-2026-94266
+    package:
+      name: curl
+      type: deb
+  - vulnerability: CVE-2026-94266
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  - vulnerability: CVE-2026-94266
+    package:
+      name: libcurl4t64
+      type: deb
 
-  # --- added by curator on 2026-11-01 (UTC) ---
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-107928
+  # --- added by curator on 2026-11-02 (UTC) ---
+  # Critical — upstream won't-fix
+  - vulnerability: CVE-2026-10536
     package:
       name: curl
       type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-107928
+  # Critical — upstream won't-fix
+  - vulnerability: CVE-2026-10536
     package:
       name: libcurl3t64-gnutls
       type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-107928
+  # Critical — upstream won't-fix
+  - vulnerability: CVE-2026-10536
     package:
       name: libcurl4t64
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-107929
+  - vulnerability: CVE-2026-107161
+    package:
+      name: libsasl2-2
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-107161
+    package:
+      name: libsasl2-modules-db
+      type: deb
+  # Critical — upstream won't-fix
+  - vulnerability: CVE-2026-11856
     package:
       name: curl
       type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-107929
+  # Critical — upstream won't-fix
+  - vulnerability: CVE-2026-11856
     package:
       name: libcurl3t64-gnutls
       type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-107929
+  # Critical — upstream won't-fix
+  - vulnerability: CVE-2026-11856
     package:
       name: libcurl4t64
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-64830
+  - vulnerability: CVE-2026-12064
+    package:
+      name: curl
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-12064
+    package:
+      name: libcurl3t64-gnutls
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-12064
+    package:
+      name: libcurl4t64
+      type: deb
+  # Critical — upstream won't-fix
+  - vulnerability: CVE-2026-52490
+    package:
+      name: libtiff6
+      type: deb
+  # High — upstream won't-fix
+  - vulnerability: CVE-2026-58049
     package:
       name: libavcodec61
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-64830
+  - vulnerability: CVE-2026-58049
     package:
       name: libavformat61
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-64830
+  - vulnerability: CVE-2026-58049
     package:
       name: libavutil59
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-64830
+  - vulnerability: CVE-2026-58049
     package:
       name: libswresample5
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-64832
+  - vulnerability: CVE-2026-88373
     package:
-      name: libavcodec61
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64832
-    package:
-      name: libavformat61
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64832
-    package:
-      name: libavutil59
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64832
-    package:
-      name: libswresample5
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64833
-    package:
-      name: libavcodec61
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64833
-    package:
-      name: libavformat61
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64833
-    package:
-      name: libavutil59
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64833
-    package:
-      name: libswresample5
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64834
-    package:
-      name: libavcodec61
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64834
-    package:
-      name: libavformat61
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64834
-    package:
-      name: libavutil59
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64834
-    package:
-      name: libswresample5
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64835
-    package:
-      name: libavcodec61
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64835
-    package:
-      name: libavformat61
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64835
-    package:
-      name: libavutil59
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-64835
-    package:
-      name: libswresample5
+      name: libde265-0
       type: deb
   # Critical — upstream won't-fix
-  - vulnerability: CVE-2026-86414
+  - vulnerability: CVE-2026-8926
     package:
       name: curl
       type: deb
   # Critical — upstream won't-fix
-  - vulnerability: CVE-2026-86414
+  - vulnerability: CVE-2026-8926
     package:
       name: libcurl3t64-gnutls
       type: deb
   # Critical — upstream won't-fix
-  - vulnerability: CVE-2026-86414
+  - vulnerability: CVE-2026-8926
     package:
       name: libcurl4t64
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-87862
+  - vulnerability: CVE-2026-8932
     package:
       name: curl
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-87862
+  - vulnerability: CVE-2026-8932
     package:
       name: libcurl3t64-gnutls
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-87862
-    package:
-      name: libcurl4t64
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-87863
-    package:
-      name: curl
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-87863
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-87863
-    package:
-      name: libcurl4t64
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-87864
-    package:
-      name: curl
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-87864
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-87864
-    package:
-      name: libcurl4t64
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-87865
-    package:
-      name: curl
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-87865
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-87865
+  - vulnerability: CVE-2026-8932
     package:
       name: libcurl4t64
       type: deb
   # Critical — upstream won't-fix
-  - vulnerability: CVE-2026-92388
+  - vulnerability: CVE-2026-9079
     package:
       name: curl
       type: deb
   # Critical — upstream won't-fix
-  - vulnerability: CVE-2026-92388
+  - vulnerability: CVE-2026-9079
     package:
       name: libcurl3t64-gnutls
       type: deb
   # Critical — upstream won't-fix
-  - vulnerability: CVE-2026-92388
+  - vulnerability: CVE-2026-9079
     package:
       name: libcurl4t64
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-92389
+  - vulnerability: CVE-2026-9080
     package:
       name: curl
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-92389
+  - vulnerability: CVE-2026-9080
     package:
       name: libcurl3t64-gnutls
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-92389
+  - vulnerability: CVE-2026-9080
     package:
       name: libcurl4t64
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-92390
+  - vulnerability: CVE-2026-9545
     package:
       name: curl
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-92390
+  - vulnerability: CVE-2026-9545
     package:
       name: libcurl3t64-gnutls
       type: deb
   # High — upstream won't-fix
-  - vulnerability: CVE-2026-92390
-    package:
-      name: libcurl4t64
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-92391
-    package:
-      name: curl
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-92391
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-92391
-    package:
-      name: libcurl4t64
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-94266
-    package:
-      name: curl
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-94266
-    package:
-      name: libcurl3t64-gnutls
-      type: deb
-  # High — upstream won't-fix
-  - vulnerability: CVE-2026-94266
+  - vulnerability: CVE-2026-9545
     package:
       name: libcurl4t64
       type: deb
