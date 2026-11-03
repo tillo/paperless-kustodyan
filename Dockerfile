@@ -8,13 +8,19 @@
 # Rebuild gosu with a current Go toolchain to clear the ~25 unreachable Go-stdlib CVEs
 # the upstream image ships in gosu (1.17 built with EOL go1.24.4; net/tls/mail/HTTP/url
 # stdlib paths gosu never exercises). gosu's own release binaries lag too (1.19 ships
-# go1.24.6), so build from source with golang:1.27 and bump its two deps to latest —
-# the go.mod pins x/sys v0.1.0, which carries GO-2026-5024.
+# go1.24.6), so build from source with golang:1.27 and raise its two deps — the go.mod
+# pins x/sys v0.1.0, which carries GO-2026-5024. The raised versions are `# renovate:`
+# pins, not @latest: @latest was resolved once and then frozen by the layer cache, so
+# it neither moved nor said which version the image held (infra-ik4p.28).
 FROM golang:1.27 AS gosu
+# renovate: datasource=go depName=golang.org/x/sys
+ARG X_SYS_VERSION=v0.49.0
+# renovate: datasource=go depName=github.com/moby/sys/user
+ARG MOBY_SYS_USER_VERSION=v0.5.0
 WORKDIR /build
 RUN go mod init gosu-build && \
     go get github.com/tianon/gosu@1.19 && \
-    go get golang.org/x/sys@latest github.com/moby/sys/user@latest && \
+    go get golang.org/x/sys@${X_SYS_VERSION} github.com/moby/sys/user@${MOBY_SYS_USER_VERSION} && \
     CGO_ENABLED=0 go build -trimpath -o /usr/local/bin/gosu github.com/tianon/gosu
 
 FROM ghcr.io/paperless-ngx/paperless-ngx:3.2.1
