@@ -23,7 +23,7 @@ RUN go mod init gosu-build && \
     go get golang.org/x/sys@${X_SYS_VERSION} github.com/moby/sys/user@${MOBY_SYS_USER_VERSION} && \
     CGO_ENABLED=0 go build -trimpath -o /usr/local/bin/gosu github.com/tianon/gosu
 
-FROM ghcr.io/paperless-ngx/paperless-ngx:3.2.1
+FROM ghcr.io/paperless-ngx/paperless-ngx:3.4.2
 
 # Replace the stale gosu binary with the freshly built one.
 COPY --from=gosu /usr/local/bin/gosu /usr/sbin/gosu
