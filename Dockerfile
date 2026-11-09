@@ -14,7 +14,7 @@
 # it neither moved nor said which version the image held (infra-ik4p.28).
 FROM golang:1.27 AS gosu
 # renovate: datasource=go depName=golang.org/x/sys
-ARG X_SYS_VERSION=v0.49.0
+ARG X_SYS_VERSION=v0.50.0
 # renovate: datasource=go depName=github.com/moby/sys/user
 ARG MOBY_SYS_USER_VERSION=v0.5.0
 WORKDIR /build
