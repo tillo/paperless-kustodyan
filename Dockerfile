@@ -43,6 +43,17 @@ RUN echo "cache day: ${CACHEBUST_DAY}" && \
 # Re-check these against the base image on every bump.
 RUN python3 -m pip install --no-cache-dir --no-deps django==5.2.17
 
+# Patch floors over 3.4.2's own pins (infra-ik4p.26, main scan job 180232): nltk
+# 3.10.3 -> 3.10.4 (GHSA-8mgp-746c-j5xp, GHSA-j456-xh4h-cpf2) and oauthlib 4.0.0 ->
+# 4.0.1 (GHSA-3jp2-3mrg-2vxc), both same-minor patch releases. The assert fails the
+# build if the install did not take. These are exact pins: on every base bump check
+# what upstream ships and drop a floor it already meets, or it would downgrade.
+RUN python3 -m pip install --no-cache-dir --no-deps nltk==3.10.4 oauthlib==4.0.1 && \
+    python3 -c "import django, nltk, oauthlib; \
+v = {'django': django.get_version(), 'nltk': nltk.__version__, 'oauthlib': oauthlib.__version__}; \
+print('floors:', v); \
+assert v == {'django': '5.2.17', 'nltk': '3.10.4', 'oauthlib': '4.0.1'}, v"
+
 # /usr/src/paperless/src is paperless's WORKDIR and on the Python import path, owned by
 # uid 1000 (paperless). --chown keeps the runtime user able to read it.
 COPY --chown=1000:1000 ./paperless_kustodyan /usr/src/paperless/src/paperless_kustodyan
