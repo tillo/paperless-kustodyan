@@ -58,5 +58,24 @@ assert v == {'django': '5.2.17', 'nltk': '3.10.4', 'oauthlib': '4.0.1'}, v"
 # uid 1000 (paperless). --chown keeps the runtime user able to read it.
 COPY --chown=1000:1000 ./paperless_kustodyan /usr/src/paperless/src/paperless_kustodyan
 
+# IAST tracer (infra-7rog.41): ddtrace (Apache-2.0/BSD-3) is installed in every image but
+# wraps the web server ONLY when DD_IAST_ENABLED=true (the QA cluster) -- iast/iast-exec.sh.
+# The upstream s6 run script execs granian in two branches (root / non-root); both are
+# routed through the switch and the build FAILS if either is missed or the switch
+# misbehaves (iast-exec.test.sh). ddtrace IAST is proven on this image's CPython 3.14
+# with Django (QA canary, 2026-11-24); NOT on 3.15 (dd-trace-py#17843).
+# renovate: datasource=pypi depName=ddtrace
+ARG DDTRACE_VERSION=4.17.2
+COPY iast/ /tmp/iast/
+RUN python3 -m pip install --no-cache-dir "ddtrace==${DDTRACE_VERSION}" && \
+    install -m 0755 /tmp/iast/iast-exec.sh /usr/local/bin/iast-exec && \
+    run=/etc/s6-overlay/s6-rc.d/svc-webserver/run && \
+    test "$(grep -c 'exec .*granian ' "$run")" = 2 && \
+    sed -i -e 's|exec granian |exec iast-exec granian |' \
+           -e 's|exec s6-setuidgid paperless granian |exec s6-setuidgid paperless iast-exec granian |' "$run" && \
+    test "$(grep -c 'iast-exec granian ' "$run")" = 2 && \
+    IAST_EXEC=/usr/local/bin/iast-exec sh /tmp/iast/iast-exec.test.sh && \
+    rm -rf /tmp/iast
+
 LABEL org.opencontainers.image.title="paperless-ngx + kustodyan field protection" \
       org.opencontainers.image.description="paperless-ngx with the Kustodyan (RPS) custom-field protection add-on"
